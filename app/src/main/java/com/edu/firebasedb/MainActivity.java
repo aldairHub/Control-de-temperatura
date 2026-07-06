@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference HumedadRef, presionRef, VelocidadRef, TemperaturaRef;
-    EditText txt_temperaruta_edit, txt_humedad_edit;
+    EditText txt_temperatura_edit, txt_humedad_edit, txt_presion_edit, txt_velocidad_edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,13 +32,15 @@ public class MainActivity extends AppCompatActivity {
         VelocidadRef = database.getReference("sensores/velocidad");
         TemperaturaRef = database.getReference("sensores/temperatura");
 
+        txt_temperatura_edit = findViewById(R.id.setvalor_Temperatura);
+        txt_humedad_edit = findViewById(R.id.setvalor_Humedad);
+        txt_presion_edit = findViewById(R.id.setvalor_Presion);
+        txt_velocidad_edit = findViewById(R.id.setvalor_Velocidad);
+
         TextView txtTemp = findViewById(R.id.valor_Temperatura);
         TextView txtHum = findViewById(R.id.valor_Humedad);
         TextView txtPres = findViewById(R.id.valor_Presion);
         TextView txtVel = findViewById(R.id.valor_Velocidad);
-
-        txt_temperaruta_edit = findViewById(R.id.setvalor_Temperatura);
-        txt_humedad_edit = findViewById(R.id.setvalor_Humedad);
 
         TemperaturaRef.addValueEventListener(setListener(txtTemp, "°C"));
         HumedadRef.addValueEventListener(setListener(txtHum, "%"));
@@ -63,11 +65,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickBotonTemperatura(View view) {
-        TemperaturaRef.setValue(txt_temperaruta_edit.getText().toString());
+        TemperaturaRef.setValue(txt_temperatura_edit.getText().toString());
     }
 
     public void clickBotonHumedad(View view) {
-        TemperaturaRef.setValue(txt_humedad_edit.getText().toString());
+        HumedadRef.setValue(txt_humedad_edit.getText().toString());
+    }
+
+    public void clickBotonPresion(View view) {
+        presionRef.setValue(txt_presion_edit.getText().toString());
+    }
+
+    public void clickBotonVelocidad(View view) {
+        VelocidadRef.setValue(txt_velocidad_edit.getText().toString());
     }
 
 }

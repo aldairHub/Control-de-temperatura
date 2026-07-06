@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "626971180526",
+    "project_id": "fir-bd-126f9",
+    "storage_bucket": "fir-bd-126f9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:626971180526:android:b67b137b4acaf3697862ff",
+        "android_client_info": {
+          "package_name": "com.edu.firebasedb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe25OQ1cHGbpYd5vHAWij6jIkhxqFDFrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

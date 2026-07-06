@@ -87,17 +87,11 @@ Puedes agregar aquí imágenes del proyecto.
 
 ### Aplicación
 
-```
 <img width="720" height="1600" alt="image" src="https://github.com/user-attachments/assets/26c0badc-d20c-4d57-9706-596b6111a0d8" />
-
-```
 
 ### Firebase
 
-```
 <img width="886" height="439" alt="image" src="https://github.com/user-attachments/assets/ab869525-f74e-4884-8ec2-d2f112f8443f" />
-
-```
 
 ---
 
